@@ -16,23 +16,23 @@ public class HeaderFooterNG extends BaseTest {
 		HeaderFooter hf = new HeaderFooter(driver);
 		hf.clickLogin();
 	}
-	@Test(dataProvider = "getData", description = "Multiple unsuccessful login attempts")
-	public void tc01_UnsuccessfulLogin(String username, String password) {
-		HeaderFooter hf = new HeaderFooter(driver);
-		hf.login(username, password);
-		Assert.assertEquals(hf.getErrorMessage(), "לא ניתן להתחבר עם פרטי המשתמש שהוזנו");
-
-	}
-
-	@DataProvider
-	public Object[][] getData() {
-		Object[][] myData = { 
-				{ "aaa@dada.ca", "123121" },
-				{ "tre@trea.wa", "Hardpassword" },
-				{ "therealmysmarty@gmail.com", "32323redw" },
-				};
-		return myData;
-	}
+//	@Test(dataProvider = "getData", description = "Multiple unsuccessful login attempts")
+//	public void tc01_UnsuccessfulLogin(String username, String password) {
+//		HeaderFooter hf = new HeaderFooter(driver);
+//		hf.login(username, password);
+//		Assert.assertEquals(hf.getErrorMessage(), "לא ניתן להתחבר עם פרטי המשתמש שהוזנו");
+//
+//	}
+//
+//	@DataProvider
+//	public Object[][] getData() {
+//		Object[][] myData = { 
+//				{ "aaa@dada.ca", "123121" },
+//				{ "tre@trea.wa", "Hardpassword" },
+//				{ "therealmysmarty@gmail.com", "32323redw" },
+//				};
+//		return myData;
+//	}
 
 	@Test(description = "Successfully logging in")
 	public void tc02_login() {
